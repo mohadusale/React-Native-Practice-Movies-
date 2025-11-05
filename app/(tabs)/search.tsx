@@ -37,9 +37,7 @@ const search = () => {
     // HOOK 2: Se encarga de REACCIONAR cuando los datos (movies) cambian
     useEffect(() => {
         // Se ejecuta solo si la carga ha terminado, hay un query, y tenemos resultados
-        if (!loading && searchQuery.trim() && movies && movies.length > 0) {
-            
-            // Llama a appwrite con los datos correctos y sincronizados
+        if (!loading && searchQuery.trim() && movies && movies.length > 0) {   
             updateSearchCount(searchQuery, movies[0]);
         }
     }, [movies, loading]);

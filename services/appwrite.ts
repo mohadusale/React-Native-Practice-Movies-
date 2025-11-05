@@ -12,7 +12,6 @@ export const updateSearchCount = async (query: string, movie: Movie) => {
     // Hay que mirar primero si ya se ha guardado un registro con esos datos
     // Si se encuentra el registro, se aumenta el count
     // Si no encuentra, se crea un nuevo registro en la base de datos con count = 1
-    console.log("hola");
     try {
         const result = await database.listDocuments(DATABASE_ID, 'metrics', [
             Query.equal('searchTerm', query)
@@ -45,5 +44,19 @@ export const updateSearchCount = async (query: string, movie: Movie) => {
     } catch (err) {
         console.log(err);
         throw err;
+    }
+}
+
+export const getTrendingMovies = async (): Promise<TrendingMovie[] | undefined> => {
+    try {
+        const result = await database.listDocuments(DATABASE_ID, 'metrics', [
+            Query.limit(5),
+            Query.orderDesc('count'),
+        ])
+
+        return result.documents as unknown as TrendingMovie[];
+    } catch (err) {
+        console.log(err);
+        return undefined;
     }
 }
