@@ -119,7 +119,7 @@ Las contribuciones son bienvenidas. Para contribuir:
 
 **Tu Nombre**
 - GitHub: [@mohadusale](https://github.com/mohadusale)
-- LinkedIn: [Mohamed Ech Chantoufy Aourram](www.linkedin.com/in/mohamed-ech-chantoufy-15652a252)
+- LinkedIn: [Mohamed Ech Chantoufy Aourram](https://www.linkedin.com/in/mohamed-ech-chantoufy-15652a252/)
 
 ---
 
