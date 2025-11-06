@@ -1,50 +1,63 @@
-# Welcome to your Expo app 👋
+# Aplicación de Películas
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Esta es una aplicación de películas desarrollada con [Expo](https://expo.dev) que permite a los usuarios explorar y obtener información sobre diferentes películas.
 
-## Get started
+## Estructura del Proyecto
 
-1. Install dependencies
+```plaintext
+/app
+  - _layout.tsx
+  - (tabs)/
+    - _layout.tsx
+    - index.tsx
+    - ...
+  - globals.css
+  - movies/
+    - [id].tsx
+/assets
+  - fonts/
+  - icons/
+  - images/
+/components
+/constants
+/services
+```
+
+## Dependencias Principales
+
+- `expo`: ^54.x
+- `react-native`: ^0.81.x
+- `react-navigation`: Fáciles de configurar rutas y navegación
+- `tailwindcss`: Para estilos rápidos y efectivos
+- `appwrite`: Un backend para manejo de base de datos y autenticación
+
+## Configuración Inicial
+
+1. **Instalar dependencias**
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. **Iniciar la aplicación**
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+## Uso
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Explora diferentes películas y obtén información sobre ellas.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Desarrollo
 
-## Get a fresh project
+Esta aplicación usa configuraciones avanzadas de Expo para soportar tanto iOS como Android.
+Los estilos se manejan con Tailwind CSS, y las rutas se gestionan usando el enrutador de Expo.
 
-When you're ready, run:
+## Contribución
 
-```bash
-npm run reset-project
-```
+Las contribuciones son bienvenidas. Si deseas contribuir, por favor bifurca el repositorio y crea una solicitud de extracción.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Licencia
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+MIT
